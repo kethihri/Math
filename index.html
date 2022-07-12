@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>1 - 100</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <meta name="color-scheme" content="light dark"> 
+    </head>
+
+    <body onload="New()">
+        <center>
+        <h1 style="font-style: italic; font-weight: bolder;">1 - 100</h1>
+
+        <br><br><br>
+
+        <input type="number" id="Guess" style="color: aliceblue;">
+
+        <br><br>
+            <button class="btn btn-primary" onclick="Check()" style="width: 30%;">Check</button>
+            <br><br>
+            <label id="Higher/Lower" style="font-size: 20px; color: black;"></label>
+
+            <br><br>
+            <img src="NC.jpg">
+    </center>
+
+    
+    
+    
+    
+    
+    <script>
+
+function New()
+{
+    Number1 = Math.floor(Math.random() * 101);
+    console.log(Number1);
+}
+var Guess = document.getElementById("Guess").value;
+
+
+function Check() 
+{
+    Number1 = Math.floor(Math.random() * 101);
+    console.log(Number1);
+    if(Number1 > Guess)
+    {
+        document.getElementById("Higher/Lower").innerHTML = "Higher";
+    }
+
+    if(Number1 < Guess)
+    {
+        document.getElementById("Higher/Lower").innerHTML = "Lower";
+    }
+
+    if(Number1 == Guess)
+    {
+        document.getElementById("Higher/Lower").innerHTML = "You Did It!!";
+    }
+}
+
+
+
+    </script>
+    </body>
+</html>
